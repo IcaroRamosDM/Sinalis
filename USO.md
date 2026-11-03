@@ -1,4 +1,4 @@
-# Guia de uso do Sinalis 0.15.1
+# Guia de uso do Sinalis 0.16.0
 
 O Sinalis analisa arquivos locais. Uma tela de pelo menos 1024 × 660 permite
 usar a interface; 1280 × 900 oferece mais espaço para gráficos e critérios.
@@ -124,3 +124,21 @@ poucos pontos não permitem inferir o movimento entre eles.
 Para relatar um problema, informe versão, sistema, passos e resultado esperado.
 Compartilhe somente exemplos que possam se tornar públicos. O Sinalis não
 substitui calibração, ensaios físicos ou validação técnica independente.
+
+## Recuperação e histórico de edição
+
+Em **Sessão → Recuperação automática…**, ative a opção para guardar uma cópia
+local a cada 30 segundos de alterações. Ela começa desativada e não substitui
+salvar sua sessão ou fazer backup. Após uma falha, o aplicativo oferece recuperar,
+descartar ou manter a cópia para depois. Recuperar produz trabalho ainda não
+salvo; escolha um arquivo permanente com **Salvar sessão**.
+
+Use **Sessão → Desfazer edição do modelo/filtro** e **Refazer edição do
+modelo/filtro**, ou Ctrl+Alt+Z/Ctrl+Alt+Shift+Z. O histórico guarda configurações e
+campos, incluindo textos numéricos incompletos, sem duplicar as capturas. Ele não
+persiste ao fechar o aplicativo; uma sessão carregada inicia novo histórico.
+Dentro de campos de texto, Ctrl+Z mantém o desfazer de texto habitual.
+
+Abra **Sessão → Exemplos guiados…** para os dois exercícios acompanhados de
+resultados esperados. Consulte [EXEMPLOS.md](EXEMPLOS.md),
+[COMPATIBILIDADE.md](COMPATIBILIDADE.md) e [ACEITACAO.md](ACEITACAO.md).

@@ -1,5 +1,20 @@
 # Histórico do Sinalis
 
+## 0.16.0 — preparação da 1.0
+
+- Recuperação opcional de capturas, configurações e rascunhos após falhas; cópia
+  em segundo plano, controle de instância e retomada como trabalho não salvo.
+- Temporários interrompidos de recuperação preservados com nome novo.
+- Histórico limitado de desfazer/refazer para modelos e filtros, inclusive
+  campos incompletos, sem cópias de capturas.
+- Exercícios sintéticos guiados de nove etapas e senoide de 100 Hz.
+- Rotina de verificação de release, benchmark com até um milhão de pontos,
+  regressões em diferentes escalas e teste de interrupção de gravação.
+- Contratos de compatibilidade e roteiro de aceitação da 1.0 documentados.
+- Aceitação humana e execução nativa Windows permanecem pendentes; esta versão
+  não recebe o selo 1.0.
+
+
 ## 0.15.1 — 02/11/2026
 
 Esta distribuição reúne os recursos da linha 0.15 e uma revisão de robustez,

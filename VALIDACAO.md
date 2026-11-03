@@ -1,4 +1,4 @@
-# Verificação da versão 0.15.1
+# Verificação da versão 0.16.0
 
 Revisão concluída em 02/11/2026, com núcleo C17 e interface C++17/FLTK.
 
@@ -28,6 +28,38 @@ Revisão concluída em 02/11/2026, com núcleo C17 e interface C++17/FLTK.
 Os números representam verificações e comparações automatizadas, incluindo
 iterações de testes. Não correspondem a cenários humanos independentes nem a
 uma medida de cobertura de todo o software.
+
+## Preparação da 1.0
+
+- 33 verificações novas da interface: desfazer/refazer, rascunhos incompletos,
+  troca de família de filtro, recuperação opcional, exclusividade da pasta,
+  corrupção, preservação de temporários e abertura dos exemplos guiados.
+- Regressões gráficas em escalas 100%, 125%, 150% e 200%, com capturas para
+  inspeção. Isso não constitui aceitação humana de legibilidade/acessibilidade.
+- Processo de gravação interrompido durante uma sessão: arquivo anterior
+  preservado e legível; temporário abandonado preservado. Não foi um ensaio de
+  falta de energia ou de durabilidade do sistema de arquivos.
+- Benchmark CLI com 1.000, 100.000 e 1.000.000 pontos: importação/estatísticas,
+  média móvel/exportação, salvar/abrir sessão e PDF, com três repetições e
+  registro de máquina, tempo total e pico de memória por processo.
+- Evidências de aceitação identificam versão/artefato; testes automáticos não
+  preenchem os registros de avaliação humana da 1.0.
+
+Foram escolhidos dois conjuntos experimentais públicos: as duas séries de
+20 observações do [NIST Pontius](https://www.itl.nist.gov/div898/strd/lls/data/LINKS/DATA/Pontius.dat)
+e 121.265 amostras do canal drive end do ensaio 105 da
+[CWRU, grupo a 12 kHz](https://engineering.case.edu/bearingdatacenter/12k-drive-end-bearing-fault-data).
+Estatísticas, comparação de séries e filtragem foram conferidas com referências
+numéricas independentes. São dados publicados de bancada; não houve novo ensaio
+físico local nem certificação pelo NIST/CWRU.
+
+No Pontius, X representa a ordem das observações, sem inferir tempo. O canal
+CWRU é convertido externamente de MAT para CSV, sem reamostragem, com a taxa
+publicada de 12.000 amostras/s. Unidades Y não confirmadas nas fontes consultadas
+permanecem desconhecidas. Os dados originais/conversões não acompanham os pacotes;
+as fontes e seus limites ficam registrados nas evidências de desenvolvimento.
+
+A versão 1.0 continua dependente do [roteiro de aceitação](ACEITACAO.md).
 
 ## Dependências
 
