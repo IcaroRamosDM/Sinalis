@@ -11,19 +11,30 @@ avaliar medições usando modelos com critérios configuráveis.
 Este repositório contém apenas a apresentação e os termos de distribuição.
 **O código-fonte e o histórico de desenvolvimento não são publicados aqui.**
 
-## Download — versão 0.14.2
+## Download — versão 0.15.1
 
 | Sistema | Download | Como abrir |
 |---|---|---|
-| Windows x64 | [Sinalis-0.14.2-Windows-x64.zip](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.14.2/Sinalis-0.14.2-Windows-x64.zip) | Extraia o ZIP inteiro e dê dois cliques em `Sinalis.exe` |
-| Ubuntu / Debian amd64 | [sinalis_0.14.2_amd64.deb](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.14.2/sinalis_0.14.2_amd64.deb) | Instale o pacote e procure **Sinalis** no menu do sistema |
+| Windows x64 | [Sinalis-0.15.1-Windows-x64.zip](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.15.1/Sinalis-0.15.1-Windows-x64.zip) | Extraia o ZIP inteiro e dê dois cliques em `Sinalis.exe` |
+| Ubuntu / Debian amd64 | [sinalis_0.15.1_amd64.deb](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.15.1/sinalis_0.15.1_amd64.deb) | Instale o pacote e procure **Sinalis** no menu do sistema |
 
 [Todas as versões e arquivos](https://github.com/IcaroRamosDM/Sinalis/releases)
-· [SHA-256 dos downloads](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.14.2/SHA256SUMS.txt)
+· [SHA-256 dos downloads](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.15.1/SHA256SUMS.txt)
 
 Na página da versão, abra **Assets** e escolha um dos dois pacotes acima.
 Os itens automáticos **Source code (zip)** e **Source code (tar.gz)** do GitHub
 contêm apenas os arquivos desta página, não o aplicativo nem seu código-fonte.
+
+## Novidades da versão 0.15.1
+
+- Sessões `.sinalis` para retomar sinais, modelos, filtros, observações e campos em edição.
+- Comparação de capturas, picos e medições temporais quando os dados permitem.
+- Cadeias de filtros, avaliação de pastas e exportação PNG/SVG/PDF/HTML.
+- Aviso de alterações da sessão, proteção dos arquivos em uso, ajuda por teclado,
+  foco visível e contraste revisto.
+- Correções na validação e restauração de sessões e verificações ampliadas.
+
+[Guia de uso e atalhos](USO.md) · [Histórico de alterações](CHANGELOG.md)
 
 ## Permissão de uso
 
@@ -40,7 +51,7 @@ terceiros. Consulte os termos completos em [LICENSE.md](LICENSE.md).
 | Área | Principais recursos |
 |---|---|
 | **Validação** | Modelos de análise com várias regras, resultados por critério, tolerâncias, conjuntos alternativos, envelope de aprovação e critérios por interpolação de Lagrange |
-| **Caracterização** | Quantidade de pontos, extremos, média, RMS, pico a pico, informações do sinal e espectro FFT/Welch |
+| **Caracterização** | Estatísticas, picos, período/frequência, duty, subida/descida e overshoot condicionados aos dados; espectro FFT/Welch |
 | **Laboratório** | Senoide, quadrada, pulso, triangular, dentes de serra, pulso único, rajada, sequência por pontos, ruído reprodutível e falhas controladas |
 | **Filtro** | Comparação antes/depois, média móvel, EMA, mediana, IIR, notch, FIR, Savitzky–Golay, Hampel, gaussiano, média aparada, wavelets e sugestões automáticas |
 
@@ -53,7 +64,10 @@ terceiros. Consulte os termos completos em [LICENSE.md](LICENSE.md).
   você escolha o conjunto correto. Não é um leitor universal de qualquer JSON.
 - **Saída de sinais:** JSON, CSV ou TXT.
 - **Modelos de validação:** JSON, salvos com o prefixo `TEST_`.
-- **Relatórios de avaliação:** JSON, com o prefixo `EVAL_` no fluxo de arquivos.
+- **Relatórios de avaliação:** JSON (`EVAL_` no fluxo de arquivos), PDF e HTML.
+- **Gráficos e tabelas:** PNG/SVG e CSV de espectro, picos ou diferenças.
+- **Sessões:** `.sinalis`, com dados e estado de trabalho portáteis.
+- **Cadeias:** JSON `sinalis-chain`, com até 16 etapas de filtro.
 - **Configurações de filtros:** JSON.
 
 Em **Avaliar arquivos**, selecione o sinal e o modelo para gerar o relatório.
@@ -64,7 +78,7 @@ na mesma pasta, produzindo `EVAL_ensaio.json`. Os originais são preservados.
 
 ### Windows
 
-1. Baixe `Sinalis-0.14.2-Windows-x64.zip`.
+1. Baixe `Sinalis-0.15.1-Windows-x64.zip`.
 2. No Explorador de Arquivos, clique com o botão direito no ZIP e escolha
    **Extrair Tudo…**.
 3. Abra a pasta extraída `Sinalis` e dê dois cliques em **Sinalis.exe**.
@@ -85,13 +99,13 @@ O pacote é destinado a **Ubuntu 24.04/26.04 e Debian 12/13, arquitetura
 amd64/x86-64**, com ambiente gráfico. ARM64, macOS e outras distribuições não
 estão cobertos por este pacote.
 
-1. Baixe `sinalis_0.14.2_amd64.deb`.
+1. Baixe `sinalis_0.15.1_amd64.deb`.
 2. Abra a pasta do download no gerenciador de arquivos e use **Abrir no
    terminal**.
 3. Nesse terminal, execute:
 
    ```bash
-   sudo apt install ./sinalis_0.14.2_amd64.deb
+   sudo apt install ./sinalis_0.15.1_amd64.deb
    ```
 
 4. Aguarde a instalação, abra o menu/pesquisa de aplicativos e procure
@@ -119,13 +133,13 @@ ao seu pacote com o resultado do comando abaixo, executado na pasta do download.
 Windows, no PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Sinalis-0.14.2-Windows-x64.zip
+Get-FileHash -Algorithm SHA256 .\Sinalis-0.15.1-Windows-x64.zip
 ```
 
 Linux:
 
 ```bash
-sha256sum sinalis_0.14.2_amd64.deb
+sha256sum sinalis_0.15.1_amd64.deb
 ```
 
 Os 64 caracteres do hash devem coincidir, desconsiderando maiúsculas/minúsculas.
@@ -140,6 +154,8 @@ Se houver diferença, não use o arquivo e faça um novo download da página ofi
    Um modelo de demonstração não é uma especificação técnica da sua aplicação.
 4. Em **Laboratório**, gere um sinal e envie-o para **Validação** ou **Filtro**.
 5. Em **Filtro**, compare o original com a saída antes de exportá-la.
+6. Em **Sessão → Salvar sessão…**, guarde o trabalho para retomá-lo. O asterisco
+   no título indica alterações ainda não guardadas nessa sessão.
 
 A pasta `examples` traz pequenos sinais e modelos didáticos. Os limites dos
 modelos são ilustrativos: ajuste-os conforme a finalidade da sua análise.

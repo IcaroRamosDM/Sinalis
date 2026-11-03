@@ -20,6 +20,9 @@ Texto completo: `licenses/FLTK-COPYING.txt`.
 
 Copyright (c) 2009–2017 Dave Gamble and cJSON contributors. Licença MIT.
 
+A versão é mantida com um ajuste local de serialização numérica para preservar
+a precisão dos valores `double` ao salvar e retomar dados.
+
 Texto completo: `licenses/cJSON-LICENSE.txt`.
 [Projeto](https://github.com/DaveGamble/cJSON/tree/v1.7.19).
 
@@ -55,3 +58,11 @@ redistribui cópias de glibc, libstdc++ ou bibliotecas X11 dentro do instalador.
 Os avisos desses pacotes ficam nos diretórios correspondentes em
 `/usr/share/doc` do sistema. Os textos Windows acima são incluídos apenas no
 pacote Windows.
+
+## Fonte DejaVu Sans
+
+A exportação PDF incorpora DejaVu Sans para representar os símbolos e os
+caracteres utilizados na análise. A fonte mantém seus direitos e sua licença
+própria, incluída em `licenses/DejaVu-COPYING.txt`.
+
+[Projeto DejaVu](https://dejavu-fonts.github.io/).
