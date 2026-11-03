@@ -1,24 +1,22 @@
 # Histórico do Sinalis
 
-## 0.15.1 — 02/11/2026
+## 0.16.0
 
-Esta distribuição reúne os recursos da linha 0.15 e melhorias no uso de sessões e na interface.
+- A recuperação automática pode guardar uma cópia local da sessão a cada 30 segundos. A opção fica no menu **Sessão**.
+- Os editores de modelos e filtros permitem desfazer e refazer alterações, inclusive em campos ainda incompletos.
+- O menu **Exemplos guiados…** inclui uma sequência de nove posições e uma senoide de 100 Hz.
 
-- Sessões portáteis, comparação de capturas e medições condicionadas aos dados.
-- Cadeias de até 16 filtros e avaliação de arquivos em lote.
-- Exportações PNG/SVG/PDF/HTML e CSV de espectro, picos e diferenças.
-- Indicação de alterações da sessão, com salvar/descartar/cancelar ao fechar ou
-  substituir o trabalho. Cancelar o salvamento preserva a sessão aberta.
-- Proteção unificada de capturas, modelos, referências e sessão contra destinos
-  equivalentes, vínculos e sobrescritas indevidas.
-- Correção da validação de entradas/saídas armazenadas em sessões, incluindo
-  saídas inativas. Texto inválido da interface é recusado antes da restauração.
-- Ajuda contextual por teclado, guia interno, atalhos, foco visível e contraste
-  revisto, mantendo a identidade do aplicativo.
+A revisão 1 dos pacotes atualiza os manuais desta versão.
 
+## 0.15.1
+
+- Sessões portáteis em `.sinalis` guardam capturas, modelos, filtros e anotações. Ao fechar, o aplicativo oferece salvar, descartar ou continuar editando.
+- Comparação entre duas capturas e medição de picos, período e tempos de subida e descida.
+- Cadeias de até 16 filtros, avaliação de uma pasta de capturas e exportação de gráficos, tabelas e relatórios.
+- Correções ao reabrir sessões e ao escolher um destino de gravação que já está em uso. Ajuda e atalhos disponíveis pelo teclado.
 
 ## 0.14.2
 
-Distribuição pública anterior, com análise, geração, filtros, critérios,
-Lagrange, envelope, espectro e pacotes Windows/Linux. Seus downloads continuam
-disponíveis na página de releases.
+Primeira distribuição pública para Windows e Linux, com análise de sinais,
+gerador de formas de onda, filtros e avaliação por critérios, envelope e
+interpolação de Lagrange.
