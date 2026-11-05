@@ -1,5 +1,7 @@
 <p align="center"><img src="logo.png" width="100" alt="Logo do Sinalis"></p>
 
+[![Distribution checks](https://github.com/IcaroRamosDM/Sinalis/actions/workflows/checks.yml/badge.svg)](https://github.com/IcaroRamosDM/Sinalis/actions/workflows/checks.yml)
+
 # Sinalis
 
 **Visualize, caracterize, gere, filtre e valide sinais em uma interface gráfica.**
@@ -8,8 +10,9 @@ O Sinalis é um aplicativo de análise offline para Windows e Linux, com interfa
 em português. Você pode explorar sinais de teste, experimentar filtros e
 avaliar medições usando modelos com critérios configuráveis.
 
-Este repositório contém apenas a apresentação e os termos de distribuição.
-**O código-fonte e o histórico de desenvolvimento não são publicados aqui.**
+Distribuição oficial de código fechado: este repositório reúne os downloads,
+os manuais e os termos de uso. A implementação e o histórico de desenvolvimento
+são mantidos separadamente.
 
 ## Download — versão 0.16.0
 
@@ -55,6 +58,12 @@ nativa Windows continuam pendentes.
 
 A permissão educacional não cobre automaticamente serviços comerciais a
 terceiros. Consulte os termos completos em [LICENSE.md](LICENSE.md).
+
+## Tecnologia
+
+Núcleo em C17 e interface desktop em C++17 com FLTK. O aplicativo é distribuído
+com código fechado nos termos da licença; os pacotes incluem os avisos e as
+licenças das dependências.
 
 ## O que você pode fazer
 
@@ -200,12 +209,16 @@ para o uso normal da interface gráfica.
 
 ## Autoria e contato
 
-**Ícaro Ramos Rodrigues dos Santos**  
+**Icaro Ramos Rodrigues dos Santos**<br>
 Engenheiro Eletrônico
 
-[GitHub](https://github.com/IcaroRamosDM)
-· [LinkedIn e pedidos de autorização comercial](https://www.linkedin.com/in/icaro-ramos-r/)
-· [Relatar problema](https://github.com/IcaroRamosDM/Sinalis/issues)
+Embedded Systems | Firmware | C | C++ | Python | Dart | Assembly | Hardware Design | PCB Design | STM32 | ARM Cortex-M | Linux | Windows | RISC-V | Verilog | SystemVerilog | UVM | Design Verification | Instrumentation | Signal Processing | Qt | FLTK
+
+GitHub: [IcaroRamosDM](https://github.com/IcaroRamosDM)<br>
+LinkedIn: [icaro-ramos-r](https://www.linkedin.com/in/icaro-ramos-r/)<br>
+[icaroelt@gmail.com](mailto:icaroelt@gmail.com)
+
+[Relatar problema](https://github.com/IcaroRamosDM/Sinalis/issues)
 
 Ao relatar um problema, informe versão do programa, sistema operacional e passos
 para reproduzi-lo. Anexe somente exemplos que possam ser tornados públicos,

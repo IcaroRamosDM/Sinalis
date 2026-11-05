@@ -1,0 +1,23 @@
+{
+  "repository": "IcaroRamosDM/Sinalis",
+  "excluded_application_directories": [
+    "src",
+    "gui",
+    "studio",
+    "core",
+    "include",
+    "data",
+    "backups"
+  ],
+  "releases": [
+    {
+      "tag": "v0.16.0",
+      "prerelease": false,
+      "assets": [
+        "SHA256SUMS.txt",
+        "sinalis_0.16.0_amd64.deb",
+        "Sinalis-0.16.0-Windows-x64.zip"
+      ]
+    }
+  ]
+}
