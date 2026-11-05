@@ -2,204 +2,65 @@
 
 # Sinalis
 
-**Visualize, caracterize, gere, filtre e valide sinais em uma interface gráfica.**
+O Sinalis é um aplicativo de análise de sinais para Windows e Linux. Abra uma
+captura em JSON, CSV ou TXT, examine a forma de onda e compare as medidas com
+os limites do seu ensaio. Você pode salvar os dados, os critérios e os filtros
+numa sessão para retomar o trabalho depois. A análise é feita no seu computador.
 
-O Sinalis é um aplicativo de análise offline para Windows e Linux, com interface
-em português. Você pode explorar sinais de teste, experimentar filtros e
-avaliar medições usando modelos com critérios configuráveis.
+![Onda quadrada na aba Laboratório](sinalis.png)
 
-Este repositório contém apenas a apresentação e os termos de distribuição.
-**O código-fonte e o histórico de desenvolvimento não são publicados aqui.**
+## Download
 
-## Download — versão 0.16.0
-
-| Sistema | Download | Como abrir |
-|---|---|---|
-| Windows x64 | [Sinalis-0.16.0-Windows-x64.zip](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0/Sinalis-0.16.0-Windows-x64.zip) | Extraia o ZIP inteiro e dê dois cliques em `Sinalis.exe` |
-| Ubuntu / Debian amd64 | [sinalis_0.16.0_amd64.deb](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0/sinalis_0.16.0_amd64.deb) | Instale o pacote e procure **Sinalis** no menu do sistema |
-
-[Todas as versões e arquivos](https://github.com/IcaroRamosDM/Sinalis/releases)
-· [SHA-256 dos downloads](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0/SHA256SUMS.txt)
-
-Na página da versão, abra **Assets** e escolha um dos dois pacotes acima.
-Os itens automáticos **Source code (zip)** e **Source code (tar.gz)** do GitHub
-contêm apenas os arquivos desta página, não o aplicativo nem seu código-fonte.
-
-## Novidades da versão 0.16.0
-
-Versão de preparação da 1.0. Aceitação humana com os ensaios pretendidos e execução
-nativa Windows continuam pendentes.
-
-- Recuperação automática opcional de alterações após falhas, sem substituir salvar a sessão.
-- Desfazer/refazer de configurações e campos dos modelos/filtros.
-- Exemplos guiados com resultados conhecidos para etapas e sinais temporais.
-- Verificação de release, escalas de interface e medições de desempenho registradas.
-
-- Sessões `.sinalis` para retomar sinais, modelos, filtros, observações e campos em edição.
-- Comparação de capturas, picos e medições temporais quando os dados permitem.
-- Cadeias de filtros, avaliação de pastas e exportação PNG/SVG/PDF/HTML.
-- Aviso de alterações da sessão, proteção dos arquivos em uso, ajuda por teclado,
-  foco visível e contraste revisto.
-- Correções na validação e restauração de sessões.
-
-[Guia de uso e atalhos](USO.md) · [Exemplos guiados](EXEMPLOS.md) · [Histórico de alterações](CHANGELOG.md)
-
-[Compatibilidade e recuperação](COMPATIBILIDADE.md)
-
-## Permissão de uso
-
-- **Gratuito para uso pessoal e educacional.**
-- **Instituições de ensino públicas e particulares estão incluídas**, mesmo
-  quando cobram mensalidades ou pelos cursos.
-- **Uso comercial requer solicitação e autorização prévia do autor.**
-
-A permissão educacional não cobre automaticamente serviços comerciais a
-terceiros. Consulte os termos completos em [LICENSE.md](LICENSE.md).
-
-## O que você pode fazer
-
-| Área | Principais recursos |
+| Sistema | Sinalis 0.16.0, revisão 1 dos pacotes |
 |---|---|
-| **Validação** | Modelos de análise com várias regras, resultados por critério, tolerâncias, conjuntos alternativos, envelope de aprovação e critérios por interpolação de Lagrange |
-| **Caracterização** | Estatísticas, picos, período/frequência, duty, subida/descida e overshoot condicionados aos dados; espectro FFT/Welch |
-| **Laboratório** | Senoide, quadrada, pulso, triangular, dentes de serra, pulso único, rajada, sequência por pontos, ruído reprodutível e falhas controladas |
-| **Filtro** | Comparação antes/depois, média móvel, EMA, mediana, IIR, notch, FIR, Savitzky–Golay, Hampel, gaussiano, média aparada, wavelets e sugestões automáticas |
+| Ubuntu 24.04/26.04 e Debian 12/13 (amd64) | [Baixar instalador Linux](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0-1/sinalis_0.16.0-1_amd64.deb) |
+| Windows x64 | [Baixar ZIP para Windows](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0-1/Sinalis-0.16.0-1-Windows-x64.zip) |
 
-![Laboratório do Sinalis com uma onda quadrada sintética](sinalis.png)
+No Linux, abra um terminal na pasta do download e instale o pacote. Depois,
+procure **Sinalis** no menu de aplicativos.
 
-### Arquivos e modelos
-
-- **Entrada de sinais:** JSON com estruturas reconhecidas, CSV e TXT numéricos.
-  Se houver diferentes sinais possíveis no JSON, a importação pode pedir que
-  você escolha o conjunto correto. Não é um leitor universal de qualquer JSON.
-- **Saída de sinais:** JSON, CSV ou TXT.
-- **Modelos de validação:** JSON, salvos com o prefixo `TEST_`.
-- **Relatórios de avaliação:** JSON (`EVAL_` no fluxo de arquivos), PDF e HTML.
-- **Gráficos e tabelas:** PNG/SVG e CSV de espectro, picos ou diferenças.
-- **Sessões:** `.sinalis`, com dados e estado de trabalho portáteis.
-- **Cadeias:** JSON `sinalis-chain`, com até 16 etapas de filtro.
-- **Configurações de filtros:** JSON.
-
-Em **Avaliar arquivos**, selecione o sinal e o modelo para gerar o relatório.
-Na correspondência automática, `ensaio.json` é associado a `TEST_ensaio.json`
-na mesma pasta, produzindo `EVAL_ensaio.json`. Os originais são preservados.
-
-## Instalação
-
-### Windows
-
-1. Baixe `Sinalis-0.16.0-Windows-x64.zip`.
-2. No Explorador de Arquivos, clique com o botão direito no ZIP e escolha
-   **Extrair Tudo…**.
-3. Abra a pasta extraída `Sinalis` e dê dois cliques em **Sinalis.exe**.
-
-Mantenha a pasta `examples` junto dos executáveis. Não é necessário instalar
-Ubuntu, WSL, compilador ou ferramentas de desenvolvimento. O pacote é portátil:
-para removê-lo, feche o programa e exclua a pasta extraída, preservando os
-sinais, modelos e relatórios que você queira guardar.
-
-O executável não tem assinatura digital de editor. Se o Windows ou a política
-da sua instituição bloquear a execução, não desative as proteções; consulte o
-administrador ou reporte o problema. A verificação SHA-256 abaixo detecta
-diferenças no download, mas não substitui uma assinatura digital.
-
-### Ubuntu e Debian
-
-O pacote é destinado a **Ubuntu 24.04/26.04 e Debian 12/13, arquitetura
-amd64/x86-64**, com ambiente gráfico. ARM64, macOS e outras distribuições não
-estão cobertos por este pacote.
-
-1. Baixe `sinalis_0.16.0_amd64.deb`.
-2. Abra a pasta do download no gerenciador de arquivos e use **Abrir no
-   terminal**.
-3. Nesse terminal, execute:
-
-   ```bash
-   sudo apt install ./sinalis_0.16.0_amd64.deb
-   ```
-
-4. Aguarde a instalação, abra o menu/pesquisa de aplicativos e procure
-   **Sinalis**. Também é possível abrir pelo comando `sinalis`.
-
-O APT resolve as dependências do sistema; pode ser necessária conexão à
-internet durante a instalação. O aplicativo usa X11; sessões Wayland precisam
-de XWayland. Ele não define automaticamente o aplicativo padrão dos seus JSON
-e CSV, nem inicia com o sistema.
-
-Para desinstalar:
-
-```bash
-sudo apt remove sinalis
+```sh
+sudo apt install ./sinalis_0.16.0-1_amd64.deb
 ```
 
-Os exemplos instalados ficam em `/usr/share/sinalis/examples`. Copie os arquivos
-que quiser editar para uma pasta sua. Não salve relatórios na pasta de instalação.
+No Windows, extraia o ZIP inteiro e abra `Sinalis.exe` na pasta `Sinalis`.
+Mantenha a pasta `examples` junto ao executável. O pacote Windows ainda aguarda
+teste nativo e o executável está sem assinatura digital.
 
-### Verificar o download
-
-Baixe `SHA256SUMS.txt` na mesma página da versão. Compare a linha correspondente
-ao seu pacote com o resultado do comando abaixo, executado na pasta do download.
-
-Windows, no PowerShell:
-
-```powershell
-Get-FileHash -Algorithm SHA256 .\Sinalis-0.16.0-Windows-x64.zip
-```
-
-Linux:
-
-```bash
-sha256sum sinalis_0.16.0_amd64.deb
-```
-
-Os 64 caracteres do hash devem coincidir, desconsiderando maiúsculas/minúsculas.
-Se houver diferença, não use o arquivo e faça um novo download da página oficial.
+[Outras versões](https://github.com/IcaroRamosDM/Sinalis/releases) · [Hashes SHA-256 dos downloads](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0-1/SHA256SUMS.txt)
 
 ## Primeiro uso
 
-1. Abra o Sinalis e clique em **Sinal de exemplo**, ou use **Abrir sinal…**
-   para carregar seus próprios dados.
-2. Em **Caracterização**, confira os valores e as unidades do sinal.
-3. Em **Validação**, configure os critérios, salve o modelo e avalie os dados.
-   Um modelo de demonstração não é uma especificação técnica da sua aplicação.
-4. Em **Laboratório**, gere um sinal e envie-o para **Validação** ou **Filtro**.
-5. Em **Filtro**, compare o original com a saída antes de exportá-la.
-6. Em **Sessão → Salvar sessão…**, guarde o trabalho para retomá-lo. O asterisco
-   no título indica alterações ainda não guardadas nessa sessão.
+Em **Sessão → Exemplos guiados…**, escolha **Medições por etapas** para avaliar
+nove posições em milímetros ou **Sinal temporal e filtragem** para trabalhar
+com uma senoide de 100 Hz. Para analisar seus dados, clique em **Abrir sinal…**.
 
-A pasta `examples` traz pequenos sinais e modelos didáticos. Os limites dos
-modelos são ilustrativos: ajuste-os conforme a finalidade da sua análise.
+- **Validação** compara a captura com as regras do modelo e mostra o resultado de cada critério.
+- **Caracterização** mostra estatísticas, picos e espectro. Com uma base de tempo regular, também mede período e frequência.
+- **Laboratório** gera sinais de teste e permite acrescentar ruído, pulsos e falhas pontuais.
+- **Filtro** mostra entrada e saída lado a lado. Você pode exportar o resultado ou encadear filtros.
 
-Os pacotes também incluem uma ferramenta de terminal opcional. Para consultar
-os comandos, execute `sinalis-cli` sem argumentos no Linux ou
-`./waveform-cli.exe` sem argumentos no PowerShell aberto na pasta Windows
-extraída. Nenhum terminal é necessário
-para o uso normal da interface gráfica.
+[Guia de uso e atalhos](USO.md) · [Exemplos passo a passo](EXEMPLOS.md) · [Formatos de arquivo](COMPATIBILIDADE.md) · [Histórico de versões](CHANGELOG.md)
 
-## Limitações
+## Licença
 
-- A análise é **offline**. Não há aquisição por USB/serial, controle de placa,
-  leitura de fotos de gráficos ou importação XLSX.
-- Unidades são informadas pelo usuário; o programa não faz conversão física
-  automática entre unidades diferentes.
-- Sugestões de filtros são heurísticas. Não garantem a recuperação do sinal
-  ideal e podem suavizar características úteis. Compare sempre original e saída.
-- Uma interpolação pode oscilar entre pontos; nós usados para construir a curva
-  não oferecem uma comparação independente. Mostrar Lagrange e validar por
-  Lagrange são opções diferentes.
-- **Aprovado** significa atendimento aos critérios configurados, não aprovação
-  física ou certificação industrial. **Inconclusivo** não deve ser interpretado
-  como aprovação.
-- A distribuição para Windows requer um sistema x64.
+O Sinalis é um aplicativo de código fechado, escrito em C17 e C++17 com FLTK.
+O uso pessoal e educacional é gratuito, inclusive em instituições de ensino
+particulares. O uso comercial requer autorização prévia do autor.
+[Licença de uso](LICENSE.md)
 
 ## Autoria e contato
 
-**Ícaro Ramos Rodrigues dos Santos**  
+**Icaro Ramos Rodrigues dos Santos**<br>
 Engenheiro Eletrônico
 
-[GitHub](https://github.com/IcaroRamosDM)
-· [LinkedIn e pedidos de autorização comercial](https://www.linkedin.com/in/icaro-ramos-r/)
-· [Relatar problema](https://github.com/IcaroRamosDM/Sinalis/issues)
+Embedded Systems | Firmware | C | C++ | Python | Dart | Assembly | Hardware Design | PCB Design | STM32 | ARM Cortex-M | Linux | Windows | RISC-V | Verilog | SystemVerilog | UVM | Design Verification | Instrumentation | Signal Processing | Qt | FLTK
+
+GitHub: [IcaroRamosDM](https://github.com/IcaroRamosDM)<br>
+LinkedIn: [icaro-ramos-r](https://www.linkedin.com/in/icaro-ramos-r/)<br>
+[icaroelt@gmail.com](mailto:icaroelt@gmail.com)
+
+[Relatar problema](https://github.com/IcaroRamosDM/Sinalis/issues)
 
 Ao relatar um problema, informe versão do programa, sistema operacional e passos
 para reproduzi-lo. Anexe somente exemplos que possam ser tornados públicos,
@@ -213,3 +74,5 @@ This software is based in part on the work of the Independent JPEG Group.
 Consulte [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Os textos das licenças
 de terceiros acompanham os pacotes de download na pasta `licenses` (Windows)
 ou em `/usr/share/doc/sinalis/licenses` (Linux).
+
+[![Distribution checks](https://github.com/IcaroRamosDM/Sinalis/actions/workflows/checks.yml/badge.svg)](https://github.com/IcaroRamosDM/Sinalis/actions/workflows/checks.yml)
