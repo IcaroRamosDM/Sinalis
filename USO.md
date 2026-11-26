@@ -1,4 +1,4 @@
-# Guia de uso do Sinalis 0.16.0
+# Guia de uso do Sinalis 0.17.0
 
 O Sinalis analisa arquivos locais. Uma tela de pelo menos 1024 × 660 permite
 usar a interface; 1280 × 900 oferece mais espaço para gráficos e critérios.
@@ -13,8 +13,11 @@ usar a interface; 1280 × 900 oferece mais espaço para gráficos e critérios.
 5. Clique em **Avaliar modelo** e confira os resultados e suas justificativas.
 
 O sinal que acompanha a abertura do programa é um exemplo. Os limites dos
-modelos de demonstração são fictícios. Editar a unidade de X muda a
-identificação, sem converter os números.
+modelos de demonstração são fictícios. Para ler uma amostra, aponte para a curva. A caixa mostra o ponto, X e Y com suas unidades.
+
+Clique em **Eixos…** ou no rótulo de um eixo para escolher uma unidade ou digitar a sua. A alteração identifica as amostras na escala em que foram registradas. Por exemplo, se X contém 250 e esse número representa milissegundos, escolha **ms**. O valor continuará sendo 250. O modelo de validação mantém suas próprias unidades exigidas.
+
+No cabeçalho, **Tema escuro** alterna as cores. A preferência é mantida na próxima abertura. Os menus **Sessão**, **Analisar** e **Exportar** ficam acima das quatro abas.
 
 ## Modelo e sessão
 
@@ -52,12 +55,12 @@ critérios de Lagrange habilitados acrescentam suas próprias exigências.
 
 ## Comparar e medir
 
-**Comparar capturas…** recebe uma referência e informa erros e diferenças.
+**Analisar → Comparar capturas…** recebe uma referência e informa erros e diferenças.
 Escolha entre coordenadas exatas e interpolação linear explícita. O programa
 confere domínios e unidades; não extrapola a referência nem converte unidades
 automaticamente. Correlação pode ficar indisponível para sinais constantes.
 
-**Medir características…** localiza picos e, quando há base temporal regular
+**Analisar → Medir características…** localiza picos e, quando há base temporal regular
 e transições suficientes, calcula período, frequência, duty e tempos de
 subida/descida. O overshoot exige níveis de referência manuais. Um resultado
 indisponível não é substituído por zero nem se torna um critério de aprovação
@@ -67,7 +70,13 @@ automaticamente.
 
 Em **Laboratório**, configure a forma de onda, quantidade/duração, frequência e
 níveis antes de gerar. Ruído com semente fixa permite repetir o experimento.
-Envie uma cópia para **Validação** ou **Filtro** quando desejar.
+Escolha a **Unidade de Y** do sinal. A base do gerador é em segundos.
+
+Para simular defeitos, marque **Adicionar perturbações controladas**. Ative **Trechos constantes** ou **Falhas pontuais** e informe a primeira ocorrência. Em **Editar lista…**, preencha outra ocorrência e clique em **Adicionar**. Para corrigir uma entrada, selecione-a na lista, altere os campos e clique em **Atualizar seleção**. **Remover** exclui a entrada selecionada. Confirme em **Aplicar lista** e clique em **Gerar e visualizar**.
+
+Os pontos começam em P1 e os extremos dos trechos são inclusivos. Se dois trechos se sobrepõem, prevalece o último da lista. Em seguida, o gerador soma as falhas. Dois ajustes no mesmo ponto se acumulam. A sessão guarda as duas listas.
+
+Use **Enviar para Validação** para analisar a prévia ou, na aba **Filtro**, escolha a entrada do Laboratório.
 
 Em **Filtro**, confira a amostragem, escolha o processamento e compare a entrada
 com a saída. Sugestões são heurísticas; características úteis também podem ser
@@ -92,7 +101,7 @@ uma decisão de sobrescrita.
 O zoom não reduz essa exportação. CSV/TXT utilizam ponto decimal e um cabeçalho
 de metadados que o Sinalis consegue reimportar.
 
-**Gráficos e relatório** oferece PNG, SVG, PDF e HTML. PNG representa o gráfico
+**Exportar** oferece PNG, SVG, PDF e HTML. PNG representa o gráfico
 visível; os relatórios utilizam os dados completos da avaliação. PDF inclui a
 configuração no anexo `configuracao.json`; HTML apresenta a configuração no
 próprio documento. Há também exportação CSV para espectro, picos e diferenças.

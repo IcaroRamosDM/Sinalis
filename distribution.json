@@ -11,6 +11,15 @@
   ],
   "releases": [
     {
+      "tag": "v0.17.0",
+      "prerelease": false,
+      "assets": [
+        "SHA256SUMS.txt",
+        "sinalis_0.17.0_amd64.deb",
+        "Sinalis-0.17.0-Windows-x64.zip"
+      ]
+    },
+    {
       "tag": "v0.16.0-1",
       "prerelease": false,
       "assets": [

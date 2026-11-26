@@ -1,6 +1,6 @@
 # Formatos de arquivo
 
-O Sinalis 0.16.0 abre sinais em JSON e tabelas numéricas em CSV ou TXT. Se um
+O Sinalis 0.17.0 abre sinais em JSON e tabelas numéricas em CSV ou TXT. Se um
 JSON contiver mais de uma série, a prévia permite escolher qual importar.
 Confira as unidades de X e Y antes de comparar capturas. Alterar o nome de uma
 unidade mantém os valores numéricos.
@@ -16,6 +16,8 @@ unidade mantém os valores numéricos.
 
 CSV e TXT exportados usam ponto decimal e trazem um cabeçalho com os metadados.
 O zoom aplicado ao gráfico não muda a quantidade de amostras exportadas.
+
+Sessões das versões anteriores abrem com o trecho e a falha que já estavam configurados. A partir da 0.17.0, a sessão também guarda as ocorrências adicionais. Para retomar a edição dessas listas, use a 0.17.0 ou posterior.
 
 ## Cópia de recuperação
 

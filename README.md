@@ -7,27 +7,27 @@ captura em JSON, CSV ou TXT, examine a forma de onda e compare as medidas com
 os limites do seu ensaio. Você pode salvar os dados, os critérios e os filtros
 numa sessão para retomar o trabalho depois. A análise é feita no seu computador.
 
-![Onda quadrada na aba Laboratório](sinalis.png)
+![Sinal triangular com dois trechos constantes e falhas pontuais no Laboratório](sinalis.png)
 
 ## Download
 
-| Sistema | Sinalis 0.16.0, revisão 1 dos pacotes |
+| Sistema | Sinalis 0.17.0 |
 |---|---|
-| Ubuntu 24.04/26.04 e Debian 12/13 (amd64) | [Baixar instalador Linux](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0-1/sinalis_0.16.0-1_amd64.deb) |
-| Windows x64 | [Baixar ZIP para Windows](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0-1/Sinalis-0.16.0-1-Windows-x64.zip) |
+| Ubuntu 24.04/26.04 e Debian 12/13 (amd64) | [Baixar instalador Linux](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.17.0/sinalis_0.17.0_amd64.deb) |
+| Windows x64 | [Baixar ZIP para Windows](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.17.0/Sinalis-0.17.0-Windows-x64.zip) |
 
 No Linux, abra um terminal na pasta do download e instale o pacote. Depois,
 procure **Sinalis** no menu de aplicativos.
 
 ```sh
-sudo apt install ./sinalis_0.16.0-1_amd64.deb
+sudo apt install ./sinalis_0.17.0_amd64.deb
 ```
 
 No Windows, extraia o ZIP inteiro e abra `Sinalis.exe` na pasta `Sinalis`.
 Mantenha a pasta `examples` junto ao executável. O pacote Windows ainda aguarda
 teste nativo e o executável está sem assinatura digital.
 
-[Outras versões](https://github.com/IcaroRamosDM/Sinalis/releases) · [Hashes SHA-256 dos downloads](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.16.0-1/SHA256SUMS.txt)
+[Outras versões](https://github.com/IcaroRamosDM/Sinalis/releases) · [Hashes SHA-256 dos downloads](https://github.com/IcaroRamosDM/Sinalis/releases/download/v0.17.0/SHA256SUMS.txt)
 
 ## Primeiro uso
 
